@@ -1,0 +1,39 @@
+# Set Variables
+REPO_NAME="Lean-Six-Sigma-Consulting-Projects"
+GITHUB_USERNAME="YourGitHubUsername"
+REMOTE_URL="https://github.com/$GITHUB_USERNAME/$REPO_NAME.git"
+
+# Create Local Folder
+mkdir $REPO_NAME
+cd $REPO_NAME
+
+# Initialize Git
+git init
+
+# Create Project Files (Replace with actual files)
+touch README.md
+echo "# Lean Six Sigma Consulting Projects" > README.md
+echo "This repository contains detailed case studies of Lean Six Sigma process optimization projects." >> README.md
+
+# Create Folders for Each Project
+mkdir "Project_1_Reducing_Order_Processing_Time"
+mkdir "Project_2_Lean_Warehouse_Optimization"
+mkdir "Project_3_AI_Driven_Demand_Forecasting"
+mkdir "Project_4_Automating_Quality_Control"
+mkdir "Project_5_Lean_Six_Sigma_Training"
+
+# Add Sample Files (Replace with actual project files)
+echo "## Reducing Order Processing Time" > "Project_1_Reducing_Order_Processing_Time/README.md"
+echo "## Lean Warehouse Optimization" > "Project_2_Lean_Warehouse_Optimization/README.md"
+echo "## AI-Driven Demand Forecasting" > "Project_3_AI_Driven_Demand_Forecasting/README.md"
+echo "## Automating Quality Control" > "Project_4_Automating_Quality_Control/README.md"
+echo "## Lean Six Sigma Training & Certification" > "Project_5_Lean_Six_Sigma_Training/README.md"
+
+# Add and Commit Files
+git add .
+git commit -m "Initial commit: Added Lean Six Sigma project case studies"
+
+# Add Remote Repository and Push
+git branch -M main
+git remote add origin $REMOTE_URL
+git push -u origin main
